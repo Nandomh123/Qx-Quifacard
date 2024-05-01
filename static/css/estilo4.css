@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+p{
+    margin-bottom: 1.6em;
+}
+.container{
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.container-fluid{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+
+.header {
+    background:  #333;
+    color: white;
+    padding: 2rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.header a{
+    color: white;
+    text-decoration: none;
+} 
+
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    letter-spacing: 15px;
+    font-size: 1.3em;
+}
+.logo1{
+    letter-spacing: 15px;
+    font-size: 1.3em;
+}
+
+
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation ul li{
+    display: inline-block;
+}
+
+.navigation ul li a{
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.navigation ul li a:hover {
+    background: #4a4a4a;
+}
+
+.navigation mx-3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main{
+    padding-top: 10rem
+}
+

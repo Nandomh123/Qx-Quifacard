@@ -1,0 +1,62 @@
+{% include 'sitio/cabecera.html' %}
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/estilo2.css')}}">
+
+        <main class="main">
+
+            <div class="contenedor__todo">
+                <div class="caja__trasera">
+                    <div class="caja__trasera-login">
+                        <h3>¿Ya tienes una cuenta?</h3>
+                        <p>Inicia sesión para entrar en la página</p>
+                        <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                    </div>
+                    <div class="caja__trasera-register">
+                        <h3>¿Aún no tienes una cuenta?</h3>
+                        <p>Regístrate para que puedas iniciar sesión</p>
+                        <button id="btn__registrarse">Regístrarse</button>
+                    </div>
+                </div>
+
+                <!--Formulario de Login y registro-->
+                <div class="contenedor__login-register">
+                    <!--Login-->
+                    <form action="/sitio/acceso-login" class="formulario__login" method="post" >
+                        <h2>Iniciar Sesión</h2>
+                        <h5>Correo Electrónico:</h5>
+                        <input type="text" placeholder="Correo Electronico" name="ingrese_correo">
+                        <h5>Contraseña:</h5>
+                        <input type="password" placeholder="Contraseña" name="ingrese_contraseña">
+
+                        
+                            {% if mensaje %} 
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Error</strong> {{ mensaje }}
+                            </div>
+                            {% endif %}
+                        
+
+                        <button>Entrar</button>
+                    </form>
+
+                    <!--Register-->
+                    <form action="/sitio/login_registro/guardar" class="formulario__register" method="post" enctype="multipart/form-data">
+                        <h2>Regístrarse</h2>
+                        <h5>Nombre:</h5>
+                        <input type="text" placeholder="Nombre completo" name="nombre_completo">
+                        <h5>Correo:</h5>
+                        <input type="text" placeholder="Correo Electronico" name="correo">
+                        <h5>Usuario:</h5> 
+                        <input type="text" placeholder="Cédula/Ruc" name="usuario">
+                        <h5>Contraseña:</h5>
+                        <input type="password" placeholder="Contraseña" name="contrasena">
+                        <button type="submit" class="btn btn-primary">Regístrarse</button>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+        <script src="static/js/script.js"></script> 
+
+{% include 'sitio/pie.html' %}
